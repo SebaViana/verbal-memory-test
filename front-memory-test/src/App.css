@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+}
+
+/*Header*/
+.App-header{
+    background-color: #f3e9d6;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    height: 70px; 
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+.log-in{/*Click element*/
+    background-color: #E45826; 
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 0px 90px;
+    width: 300px;
+    transition: 0.5s;
+}
+
+p{cursor: pointer;}
+
+#displayedForm{/*log in box - form*/
+    background-color: rgb(255, 196, 0);
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 100%;
+    display:none;
+    transition: 0.5s;
+}
+
+.nav-bar{ /*links*/
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    width: 890px; /*test*/
+}
+
+/*
+.log-in form{
+    float: left;
+}
+*/
