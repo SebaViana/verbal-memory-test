@@ -1,39 +1,37 @@
 import './App.css';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from 'react';
 
-class App extends React.Component{
-  constructor(props){
-    super(props)
-    this.state = {}
-  }
+const displayedForm = function(){
+  return(
+    <form id="displayedForm">
+      a
+    </form>
+  )
+}
 
-  displayForm(){
-    document.getElementById("displayedForm").style.display="block"
-  }
-  render(){
-    return (
-      <div className="Container">
-        <header className="App-header">
-  
-          <nav className="nav-bar">
-            <p>prueba1</p>
-            <p>prueba2</p>
-            <p>prueba3</p>
-            {/*Home, landing, etc*/}
-          </nav>
-  
-          <div className="log-in" onClick={this.displayForm.bind(this)}>            
-            <p>Log in</p>
-            <form id="displayedForm">
-              a
-            </form>
-          </div>
+function App() {
+  const [click, setClick] = useState(false); //states
+  const handleClick = () => setClick(!click);
 
-        </header>
-      </div>
-    );
-  }
+  return (
+    <div className="Container">
+      <header className="App-header">
+
+        <nav className="nav-bar">
+          <p>prueba1</p>
+          <p>prueba2</p>
+          <p>prueba3</p>
+          {/*Home, landing, etc*/}
+        </nav>
+
+        <div className="log-in" onClick={handleClick}>     
+          <p>Log in</p>
+          {click && displayedForm()}
+        </div>
+
+      </header>
+    </div>
+  );
 }
 
 export default App;
